@@ -4,3 +4,8 @@ body {
   background-position: left top;
   font-family: "Zilla Slab", serif;
 }
+.accordion-button{
+  font-size: 30px !important;
+  color: rgb(74 222 128 / var(--tw-text-opacity)) !important;
+  font-weight: 700;
+}

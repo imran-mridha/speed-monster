@@ -68,7 +68,8 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
+  // const timeTakenParse = parseInt(timeTaken)
 
   // show result modal
   resultModal.innerHTML = "";
@@ -80,7 +81,7 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
+    <h1 class="finshied">Finished!</h1>
     <p>You took: <span class="bold space">${timeTaken}</span> seconds</p>
     <p class="space">You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
@@ -140,3 +141,9 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
+
+window.addEventListener('keydown', function(e) {
+  if(e.keyCode == 32 && e.target == document.body) {
+    e.preventDefault();
+  }
+});

@@ -27,14 +27,12 @@ function displayHistory() {
 
   previousTests.forEach((test) => {
     console.log(test)
-    const {timeTaken} = test;
-    const timeTakenParse = parseInt(timeTaken);
     const newRow = document.createElement("div");
     newRow.classList.add("card");
 
     newRow.innerHTML = `
-  <h3>${test.questionText}</h3>
-  <p>You took: <span class="bold">${timeTakenParse}</span> seconds</p>
+  <h3 class="bold">${test.questionText}</h3>
+  <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
   `;
 
