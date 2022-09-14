@@ -81,7 +81,10 @@ body {
   color: white;
   margin: 10px 0;
 }
-
+/* Add Space On the dailog box content*/
+.space{
+  padding: 10px 0;
+}
 .green {
   color: #9dffad;
 }
