@@ -35,11 +35,11 @@ body {
 }
 
 #display {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  padding: 2rem 5rem;
   color: white;
   font-size: 32px;
   background-color: #171717;
@@ -63,8 +63,8 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -188,5 +188,20 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px){
+  #histories{
+    grid-template-columns:repeat(2,1fr);
+    padding: 0px 20px;
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 576px){
+  #histories{
+    grid-template-columns:repeat(1, 1fr);
+    padding: 0px 20px;
+    gap: 20px;
   }
 }
