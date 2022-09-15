@@ -7,5 +7,4 @@ body {
 .accordion-button{
   font-size: 25px !important;
   color: rgb(74 222 128 / var(--tw-text-opacity)) !important;
-  font-weight: 700;
 }
