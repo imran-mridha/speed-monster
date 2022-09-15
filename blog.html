@@ -74,7 +74,7 @@
       <div class="accordion w-9/12 mx-auto" id="accordionExample">
         <div class="accordion-item bg-white border border-gray-200">
           <h2 class="accordion-header mb-0" id="headingOne">
-            <button class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-green-800 text-left bg-white border-0 rounded-none transition focus:outline-none
+            <button class="accordion-button relative flex items-center w-full py-4 px-5  text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne">
               Difference Between Local Storage & Session Storage
@@ -83,12 +83,13 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5">
-              <strong>This is the first item's accordion body.</strong> It is shown by default,
-              until the collapse plugin adds the appropriate classes that we use to style each
-              element. These classes control the overall appearance, as well as the showing and
-              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-              our default variables. It's also worth noting that just about any HTML can go within
-              the <code>.accordion-body</code>, though the transition does limit overflow.
+              <p class="text-xl">
+                The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends. <br><br>
+              </p>
+              <p class="text-xl">
+                The storage capacity of local storage is 5MB/10MB. <br>
+                The storage capacity of session storage is 5MB.
+              </p>
             </div>
           </div>
         </div>
@@ -97,18 +98,16 @@
             <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
               aria-controls="collapseTwo">
-              Accordion Item #2
+              Difference Between Global Scope & Block Scope
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default,
-              until the collapse plugin adds the appropriate classes that we use to style each
-              element. These classes control the overall appearance, as well as the showing and
-              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-              our default variables. It's also worth noting that just about any HTML can go within
-              the <code>.accordion-body</code>, though the transition does limit overflow.
+              <h3 class="text-3xl">Global Scope:</h3>
+              <p class="text-xl">The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.</p> <br>
+              <h3 class="text-3xl">Block Scope:</h3>
+              <p class="text-xl">The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.</p>
             </div>
           </div>
         </div>
@@ -117,18 +116,43 @@
             <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none
             " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
               aria-controls="collapseThree">
-              Accordion Item #3
+              How Does Works Event Loop In Javascript?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
             data-bs-parent="#accordionExample">
             <div class="accordion-body py-4 px-5">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default,
-              until the collapse plugin adds the appropriate classes that we use to style each
-              element. These classes control the overall appearance, as well as the showing and
-              hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-              our default variables. It's also worth noting that just about any HTML can go within
-              the <code>.accordion-body</code>, though the transition does limit overflow.
+              <p class="text-xl">
+                The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.
+              </p> <br>
+              <p class="text-xl">
+                The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-white border border-gray-200">
+          <h2 class="accordion-header mb-0" id="headingFour">
+            <button class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none
+            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+              aria-controls="collapseFour">
+              How Many Ways We Can Get Undefined In Javascript?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body py-4 px-5">
+              <h3 class="text-2xl">8 ways to get Undefine.</h3><br>
+              <ul class="list-disc text-xl px-5">
+                <li>set a value directly to undefined</li>
+                <li>Variable that is not initialized will give undefined</li>
+                <li>function with no return</li>
+                <li>Parameter that is not passed will be undefined</li>
+                <li>If return has nothing on the right side will return undefined</li>
+                <li>Property object does not declared but we want to console log,this time give undefined.</li>
+                <li>Accessing array elements outside of the index range</li>
+                <li>Deleting an element inside an array</li>
+              </ul>
             </div>
           </div>
         </div>
